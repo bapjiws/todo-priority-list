@@ -1,3 +1,9 @@
+install_frontend_deps:
+	cd ./front && yarn install
+build_frontend:
+	cd ./front && yarn run build
+prepare_frontend: install_frontend_deps build_frontend
+
 run_api:
 	python ./back/manage.py runserver &
 run_frontend:
