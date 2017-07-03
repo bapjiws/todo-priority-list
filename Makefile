@@ -7,7 +7,7 @@ prepare_frontend: install_frontend_deps build_frontend
 run_api:
 	python ./back/manage.py runserver &
 run_frontend:
-	cd ./front && exec yarn run prod &
+	cd ./front && yarn run prod &
 run_project: run_api run_frontend
 
 stop_api:
