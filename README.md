@@ -1,0 +1,3 @@
+- To build the project, run ```make prepare_frontend```
+- To run the project, run ```make run_project```
+- To stop the project, run ```make stop_project```
