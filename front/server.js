@@ -19,7 +19,7 @@ if (!inProductionMode) {
     app.use(webpackDevMiddleware);
     app.use(webpackHotMiddleware);
 
-    const bundlePath = path.join(__dirname, './build/index.html');
+    const bundlePath = path.join(__dirname, './static/index.html');
     app.get('/tasks', (req, res) =>  {
         res.write(webpackDevMiddleware.fileSystem.readFileSync(bundlePath));
         res.end();
@@ -29,10 +29,10 @@ if (!inProductionMode) {
         res.send('NOT HERE');
     });
 } else {
-    app.use(express.static(path.join(__dirname, 'build')));
+    app.use(express.static(path.join(__dirname, 'static')));
 
     app.get('/tasks', (req, res) => {
-        res.sendFile(path.join(__dirname, 'build/index.html'));
+        res.sendFile(path.join(__dirname, 'static/index.html'));
     });
 
     app.get('*', (req, res) => {

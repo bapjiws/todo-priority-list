@@ -1,4 +1,4 @@
 .idea
 /front/node_modules
 /front/.env
-/front/build
+/front/static
