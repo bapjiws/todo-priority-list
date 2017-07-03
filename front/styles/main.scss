@@ -1,0 +1,50 @@
+html, body, div, ul {
+  margin: 0;
+  padding: 0;
+  border:0;
+}
+
+table > thead > tr > th {
+  text-align: left;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+
+  border: 1px solid blue;
+}
+
+#app-container {
+  width: 50%;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.form-container {
+  height: 13%;
+  //margin-top: 30px;
+
+  width: 100%;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todos-container {
+  //margin-top: 100px;
+}
+
+.form-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+//* {
+//  border: 1px solid red;
+//}
