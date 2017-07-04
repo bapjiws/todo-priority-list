@@ -1,6 +1,15 @@
 FRONTEND_FOLDER := ./frontend
 BACKEND_FOLDER := ./backend
 
+install_backend_deps:
+	sudo apt install python-pip && \
+	pip install --upgrade pip && \
+	pip install psycopg2 && \
+	pip install virtualenv && \
+	pip install virtualenvwrapper && \
+	pip install Django
+prepare_backend: install_backend_deps
+
 install_frontend_deps:
 	cd $(FRONTEND_FOLDER) && yarn install
 build_frontend:
