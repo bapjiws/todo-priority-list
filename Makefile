@@ -10,6 +10,12 @@ install_backend_deps:
 	pip install Django
 prepare_backend: install_backend_deps
 
+create_db_user:
+	sudo -u postgres createuser -P -s -e $whoami
+create_db:
+	sudo -u $whoami createdb todo_list
+prepare_db: create_db_user create_db
+
 install_frontend_deps:
 	cd $(FRONTEND_FOLDER) && yarn install
 build_frontend:
