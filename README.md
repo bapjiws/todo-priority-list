@@ -1,3 +1,5 @@
-- To build the project, run ```make prepare_frontend```
+- To prepare the backend part of the project, run ```make prepare_backend```
+- To set up the DB, run ```make prepare_db```
+- To prepare the frontend part of the project, run ```make prepare_frontend```
 - To run the project, run ```make run_project```
 - To stop the project, run ```make stop_project```
